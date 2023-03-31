@@ -7,8 +7,10 @@ class Quiz {
     }
 
     checkAnswer(answer, correct) {
+        console.log("answer: ", answer);
+        console.log("correct: ", correct);
         if(correct === answer) {
-            this.score ++;
+            this.score++;
         }
         console.log("score: ",this.score);
     }
