@@ -1,0 +1,80 @@
+/* to import font family from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* reset in CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variables in CSS */
+:root {
+    --small: .75rem;
+    --normal: 1rem;
+    --large: 1.75rem;
+    --xlarge: 2.5rem;
+    --radius: 5px;
+    --titleColor: darkred;
+    --bgLight: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 10rem;
+    background-image: linear-gradient(to right, black, white);
+}
+
+/* container */
+.container {
+    font-family: 'Open Sans', sans-serif;
+    padding: var(--normal);
+    width: 30%;
+    box-shadow: .5px .5px 5px gray;
+    border-radius: var(--radius);
+    background-color: var(--bgLight);
+}
+
+.title {
+    font-size: var(--large);
+    color: var(--titleColor);
+    text-align: center;
+    word-spacing: 5px;
+}
+
+/* quiz */
+.quiz-body {
+    padding: 5px 12px;
+}
+
+.quiz-question {
+    text-align: center;
+    text-transform: capitalize;
+    padding-block: .5rem;
+    margin-top: .5rem;
+}
+
+.quiz-answers {
+    margin-top: .5rem;
+}
+
+.quiz-answer {
+    width: 100%;
+    background-color: antiquewhite;
+    margin: .5rem auto;
+    padding: 5px .5rem;
+    font-size: var(--small);
+    background-color: gainsboro;
+    border-radius: calc(var(--radius) / 2);
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background-color .7s;
+}
+
+.quiz-answer:hover {
+    background-color: rgb(245, 243, 243);
+}
