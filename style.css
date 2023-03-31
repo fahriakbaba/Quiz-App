@@ -78,3 +78,31 @@ body {
 .quiz-answer:hover {
     background-color: rgb(245, 243, 243);
 }
+
+.quiz-score {
+    padding: 5px .5rem;
+    font-size: var(--small);
+    font-weight: 600;
+    color: var(--titleColor);
+    padding-block: var(--small);
+}
+
+/* button in CSS */
+.btn {
+    padding: 3px 4px;
+    border-radius: calc(var(--radius) / 2);
+    letter-spacing: 1px;
+    margin-left: .5rem;
+    color: var(--titleColor);
+    border: 1.5px solid var(--titleColor);
+    background-color: var(--bgLight);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color .5s, color .5s, border .5s;
+}
+
+.btn:hover {
+    color: var(--bgLight);
+    background-color: var(--titleColor);
+
+}

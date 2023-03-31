@@ -14,4 +14,8 @@ class Quiz {
         }
         console.log("score: ",this.score);
     }
+
+    getQuizScore() {
+        return this.score;
+    }
 }

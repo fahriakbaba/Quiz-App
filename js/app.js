@@ -25,9 +25,7 @@ allPTags.forEach(item => {
         quiz.checkAnswer(item.innerHTML, questionsArray[numberOfQuestions].correctAnswer);
         numberOfQuestions++;
         if (numberOfQuestions > questionsArray.length - 1) {
-            console.log("soru finish");
-            alert("questions are finished")
-            location.reload();
+            ui.showScoreToUI(quiz.getQuizScore(), questionsArray.length);
             return;
         }
         ui.showInfosToUI(questionsArray[numberOfQuestions]);
