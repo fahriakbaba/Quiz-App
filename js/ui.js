@@ -11,6 +11,5 @@ class UI {
         })
         this.question.innerHTML = infos.questions
     }
-
-    handleClickForAnswer (element) { console.log(element) }
+ 
 }

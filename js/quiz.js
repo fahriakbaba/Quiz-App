@@ -6,7 +6,10 @@ class Quiz {
         this.score = 0;
     }
 
-    checkAnswer(answer) {
-        return this.correctAnswer === answer;
+    checkAnswer(answer, correct) {
+        if(correct === answer) {
+            this.score ++;
+        }
+        console.log("score: ",this.score);
     }
 }

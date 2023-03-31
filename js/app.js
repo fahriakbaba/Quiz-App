@@ -1,10 +1,11 @@
 //to get all p tags
 const allPTags = document.querySelectorAll("p");
 
-//to create instances of UI
+//to create instances of UI, Quiz
 const ui = new UI();
+const quiz = new Quiz();
 
-let numberOfQuestions = 2;
+let numberOfQuestions = 0;
 
 const questionsArray = [
     new Quiz("what is the most popular language in programming", ["C#", "JavaScript", "Python", "Java", "Swift"], "JavaScript"),
@@ -16,7 +17,18 @@ const questionsArray = [
 
 ui.showInfosToUI(questionsArray[numberOfQuestions]);
 
-allPTags.forEach(item => {
-    item.addEventListener("click", () => {ui.handleClickForAnswer(item.innerHTML)})
-})
+// allPTags.forEach(item => {
+//     item.addEventListener("click", () => {ui.handleClickForAnswer(item.innerHTML, questionsArray[numberOfQuestions])})
+// })
  
+allPTags.forEach(item => {
+    item.addEventListener("click", () => {
+        if(numberOfQuestions > questionsArray.length- 1) {
+            alert("questions are finished")
+            return
+        }
+        quiz.checkAnswer(item.innerHTML, questionsArray[numberOfQuestions].correctAnswer);
+        ui.showInfosToUI(questionsArray[numberOfQuestions]);
+        numberOfQuestions++;
+    })
+})
