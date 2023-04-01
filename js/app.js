@@ -12,7 +12,7 @@ const questionsArray = [
     new Quiz("What's the capital of Turkey?", ["Ankara", "İzmir", "İstanbul", "Antalya"], "Ankara"),
     new Quiz("What's the best football team in Turkey?", ["Galatasaray", "Beşiktaş", "Trabzonspor", "Göztepe"], "Beşiktaş"),
     new Quiz("What's the best programming language in computer?", ["Java", "Javascript", "C#", "Python"], "Python"),
-    new Quiz("Which degree freezes water?", ["0 C", "5 C", "100 C", "24 C"], "0 C")
+    new Quiz("Which degree freezes water?", ["0&#176; C", "5&#176; C", "100&#176; C", "24&#176; C"], "0 C")
 ]
 
 document.body.onload = function () {

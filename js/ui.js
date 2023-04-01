@@ -15,7 +15,7 @@ class UI {
     showScoreToUI(score, numbersOfQuestions) {
         this.question.style.display = "none";
         document.querySelector(".quiz-answers").innerHTML = `
-        <p class="quiz-score">The quiz finished and your quiz score: ${score}/${numbersOfQuestions}</p>
+        <p class="quiz-score">This quiz finished and your quiz score: <span class="big-size">${score}/${numbersOfQuestions}</span></p>
         <button class="btn" onclick="location.reload()">Restart</button>
         `;
     }
