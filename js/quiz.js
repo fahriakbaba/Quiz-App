@@ -6,6 +6,7 @@ class Quiz {
         this.score = 0;
     }
 
+    //to control answer
     checkAnswer(answer, correct) {
         console.log("answer: ", answer);
         console.log("correct: ", correct);
@@ -15,6 +16,7 @@ class Quiz {
         console.log("score: ",this.score);
     }
 
+    //to get latest score point
     getQuizScore() {
         return this.score;
     }
