@@ -1,5 +1,9 @@
 //to get all p tags
 const allPTags = document.querySelectorAll("p");
+const startButton = document.querySelector("#btn-start");
+const containerDiv =  document.querySelector(".container");
+const info = document.querySelector(".starter-info");
+const input = document.querySelector("input");
 
 //to create instances of UI, Quiz
 const ui = new UI();
@@ -20,6 +24,15 @@ const questionsArray = [
 document.body.onload = function () {
     ui.showInfosToUI(questionsArray[numberOfQuestions]);
 }
+
+startButton.addEventListener("click", () => {
+    if (input.value === "") {
+        return;
+    }
+    containerDiv.style.display = "block";
+    info.style.display = "none";
+    ui.assignName(input.value);
+});
 
 //to traverse all p tags
 allPTags.forEach(item => {
